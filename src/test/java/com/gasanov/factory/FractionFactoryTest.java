@@ -1,7 +1,6 @@
 package com.gasanov.factory;
 
-import com.gasanov.fraction.entity.Fraction;
-import com.gasanov.fraction.factory.FractionFactory;
+import com.gasanov.entity.Fraction;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

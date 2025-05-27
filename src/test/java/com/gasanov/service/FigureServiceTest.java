@@ -1,10 +1,9 @@
 package com.gasanov.service;
 
-import com.gasanov.fraction.entity.Circle;
-import com.gasanov.fraction.entity.Figure;
-import com.gasanov.fraction.entity.Fraction;
-import com.gasanov.fraction.entity.Triangle;
-import com.gasanov.fraction.service.FigureService;
+import com.gasanov.entity.Circle;
+import com.gasanov.entity.Figure;
+import com.gasanov.entity.Fraction;
+import com.gasanov.entity.Triangle;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

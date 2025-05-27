@@ -1,8 +1,10 @@
 package com.gasanov.repository;
 
-import com.gasanov.fraction.entity.*;
-import com.gasanov.fraction.repository.FigureRepository;
-import com.gasanov.fraction.specification.Specification;
+import com.gasanov.entity.Circle;
+import com.gasanov.entity.Figure;
+import com.gasanov.entity.Fraction;
+import com.gasanov.entity.Triangle;
+import com.gasanov.specification.Specification;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

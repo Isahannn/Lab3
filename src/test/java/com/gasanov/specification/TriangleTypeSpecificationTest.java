@@ -1,10 +1,9 @@
 package com.gasanov.specification;
 
-import com.gasanov.fraction.entity.Fraction;
-import com.gasanov.fraction.entity.Triangle;
-import com.gasanov.fraction.entity.Triangle.TriangleType;
-import com.gasanov.fraction.entity.Figure;
-import com.gasanov.fraction.specification.TriangleTypeSpecification;
+import com.gasanov.entity.Fraction;
+import com.gasanov.entity.Triangle;
+import com.gasanov.entity.Triangle.TriangleType;
+import com.gasanov.entity.Figure;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

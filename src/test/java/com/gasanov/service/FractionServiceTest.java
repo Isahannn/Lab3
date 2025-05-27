@@ -1,9 +1,8 @@
 package com.gasanov.service;
 
 
-import com.gasanov.fraction.entity.Fraction;
-import com.gasanov.fraction.repository.FractionRepository;
-import com.gasanov.fraction.service.FractionService;
+import com.gasanov.entity.Fraction;
+import com.gasanov.repository.FractionRepository;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

@@ -1,7 +1,6 @@
 package com.gasanov.specification;
 
-import com.gasanov.fraction.entity.Figure;
-import com.gasanov.fraction.specification.PerimeterLessSpecification;
+import com.gasanov.entity.Figure;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;

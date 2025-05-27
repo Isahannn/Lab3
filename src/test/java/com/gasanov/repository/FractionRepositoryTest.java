@@ -1,7 +1,6 @@
 package com.gasanov.repository;
 
-import com.gasanov.fraction.entity.Fraction;
-import com.gasanov.fraction.repository.FractionRepository;
+import com.gasanov.entity.Fraction;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
