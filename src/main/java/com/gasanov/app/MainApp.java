@@ -4,7 +4,7 @@ import com.gasanov.entity.Figure;
 import com.gasanov.entity.Fraction;
 import com.gasanov.factory.FigureFactory;
 import com.gasanov.repository.FigureRepository;
-import com.gasanov.specification.impl.TriangleTypeSpecificationimpl;
+import com.gasanov.specification.impl.TriangleTypeSpecificationImpl;
 import com.gasanov.entity.Triangle.TriangleType;
 import com.gasanov.specification.impl.AreaGreaterSpecification;
 import com.gasanov.specification.impl.PerimeterLessSpecificationImpl;
@@ -39,7 +39,7 @@ public class MainApp {
         }
 
         System.out.println("\nEquilateral triangles:");
-        List<Figure> equilateral = repo.query(new TriangleTypeSpecificationimpl(TriangleType.EQUILATERAL));
+        List<Figure> equilateral = repo.query(new TriangleTypeSpecificationImpl(TriangleType.EQUILATERAL));
         equilateral.forEach(System.out::println);
 
         System.out.println("\nFigures with area > 10:");
