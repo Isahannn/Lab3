@@ -1,6 +1,7 @@
 package com.gasanov.specification;
 
 import com.gasanov.entity.Figure;
+import com.gasanov.specification.impl.AreaGreaterSpecification;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -9,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class AreaGreaterSpecificationTest {
 
-    // Заглушка Figure с заданной площадью и заглушками остальных методов
     static class StubFigure extends Figure {
         private final BigDecimal area;
 
@@ -24,12 +24,12 @@ class AreaGreaterSpecificationTest {
 
         @Override
         public BigDecimal perimeter() {
-            return BigDecimal.ZERO; // заглушка
+            return BigDecimal.ZERO;
         }
 
         @Override
         public BigDecimal volume() {
-            return BigDecimal.ZERO; // заглушка
+            return BigDecimal.ZERO;
         }
     }
 

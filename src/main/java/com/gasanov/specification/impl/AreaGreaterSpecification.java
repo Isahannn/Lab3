@@ -1,6 +1,7 @@
-package com.gasanov.specification;
+package com.gasanov.specification.impl;
 
 import com.gasanov.entity.Figure;
+import com.gasanov.specification.Specification;
 
 import java.math.BigDecimal;
 

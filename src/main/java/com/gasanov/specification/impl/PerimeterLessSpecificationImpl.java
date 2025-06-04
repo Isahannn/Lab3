@@ -1,12 +1,14 @@
-package com.gasanov.specification;
+package com.gasanov.specification.impl;
 
 import com.gasanov.entity.Figure;
+import com.gasanov.specification.Specification;
+
 import java.math.BigDecimal;
 
-public class PerimeterLessSpecification implements Specification {
+public class PerimeterLessSpecificationImpl implements Specification {
     private final BigDecimal threshold;
 
-    public PerimeterLessSpecification(BigDecimal threshold) {
+    public PerimeterLessSpecificationImpl(BigDecimal threshold) {
         this.threshold = threshold;
     }
 
@@ -18,7 +20,7 @@ public class PerimeterLessSpecification implements Specification {
         return figure.perimeter().compareTo(threshold) < 0;
     }
 
-    public PerimeterLessSpecification(double threshold) {
+    public PerimeterLessSpecificationImpl(double threshold) {
         this.threshold = BigDecimal.valueOf(threshold);
     }
 }

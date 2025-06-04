@@ -4,6 +4,7 @@ import com.gasanov.entity.Fraction;
 import com.gasanov.entity.Triangle;
 import com.gasanov.entity.Triangle.TriangleType;
 import com.gasanov.entity.Figure;
+import com.gasanov.specification.impl.TriangleTypeSpecificationimpl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,10 +15,10 @@ public class TriangleTypeSpecificationTest {
 
     @Test
     void testIsSatisfiedBy() {
-        TriangleTypeSpecification specIsosceles = new TriangleTypeSpecification(TriangleType.ISOSCELES);
-        TriangleTypeSpecification specEquilateral = new TriangleTypeSpecification(TriangleType.EQUILATERAL);
-        TriangleTypeSpecification specScalene = new TriangleTypeSpecification(TriangleType.SCALENE);
-        TriangleTypeSpecification specRight = new TriangleTypeSpecification(TriangleType.RIGHT);
+        TriangleTypeSpecificationimpl specIsosceles = new TriangleTypeSpecificationimpl(TriangleType.ISOSCELES);
+        TriangleTypeSpecificationimpl specEquilateral = new TriangleTypeSpecificationimpl(TriangleType.EQUILATERAL);
+        TriangleTypeSpecificationimpl specScalene = new TriangleTypeSpecificationimpl(TriangleType.SCALENE);
+        TriangleTypeSpecificationimpl specRight = new TriangleTypeSpecificationimpl(TriangleType.RIGHT);
 
         // Создаем валидные треугольники с разными типами
 

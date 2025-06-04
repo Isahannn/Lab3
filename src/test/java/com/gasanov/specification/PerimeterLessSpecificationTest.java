@@ -1,6 +1,7 @@
 package com.gasanov.specification;
 
 import com.gasanov.entity.Figure;
+import com.gasanov.specification.impl.PerimeterLessSpecificationImpl;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -36,7 +37,7 @@ class PerimeterLessSpecificationTest {
 
     @Test
     void testIsSatisfiedBy() {
-        PerimeterLessSpecification spec = new PerimeterLessSpecification(BigDecimal.valueOf(10));
+        PerimeterLessSpecificationImpl spec = new PerimeterLessSpecificationImpl(BigDecimal.valueOf(10));
 
         Figure f1 = new StubFigure(BigDecimal.valueOf(5));
         Figure f2 = new StubFigure(BigDecimal.valueOf(10));
@@ -54,7 +55,7 @@ class PerimeterLessSpecificationTest {
 
     @Test
     void testConstructorWithDouble() {
-        PerimeterLessSpecification spec = new PerimeterLessSpecification(7.5);
+        PerimeterLessSpecificationImpl spec = new PerimeterLessSpecificationImpl(7.5);
 
         Figure f1 = new StubFigure(BigDecimal.valueOf(5));
         Figure f2 = new StubFigure(BigDecimal.valueOf(8));

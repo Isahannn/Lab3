@@ -27,7 +27,10 @@ public abstract class Figure extends Observable {
 
     @Override
     public String toString() {
-        return "Figure{id=" + id + "}";
+        final StringBuilder sb = new StringBuilder("Figure{");
+        sb.append("id=").append(id);
+        sb.append('}');
+        return sb.toString();
     }
 }
 

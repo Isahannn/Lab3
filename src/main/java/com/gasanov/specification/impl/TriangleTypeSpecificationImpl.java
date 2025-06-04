@@ -1,12 +1,13 @@
-package com.gasanov.specification;
+package com.gasanov.specification.impl;
 
 import com.gasanov.entity.Figure;
 import com.gasanov.entity.Triangle;
+import com.gasanov.specification.Specification;
 
-public class TriangleTypeSpecification implements Specification {
+public class TriangleTypeSpecificationImpl implements Specification {
     private final Triangle.TriangleType requiredType;
 
-    public TriangleTypeSpecification(Triangle.TriangleType type) {
+    public TriangleTypeSpecificationImpl(Triangle.TriangleType type) {
         this.requiredType = type;
     }
 

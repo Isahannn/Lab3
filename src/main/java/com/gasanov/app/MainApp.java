@@ -4,10 +4,10 @@ import com.gasanov.entity.Figure;
 import com.gasanov.entity.Fraction;
 import com.gasanov.factory.FigureFactory;
 import com.gasanov.repository.FigureRepository;
-import com.gasanov.specification.TriangleTypeSpecification;
+import com.gasanov.specification.impl.TriangleTypeSpecificationimpl;
 import com.gasanov.entity.Triangle.TriangleType;
-import com.gasanov.specification.AreaGreaterSpecification;
-import com.gasanov.specification.PerimeterLessSpecification;
+import com.gasanov.specification.impl.AreaGreaterSpecification;
+import com.gasanov.specification.impl.PerimeterLessSpecificationImpl;
 import com.gasanov.warehouse.Warehouse;
 import com.gasanov.util.FractionFileReader;
 import com.gasanov.exception.FractionFileReadException;
@@ -39,7 +39,7 @@ public class MainApp {
         }
 
         System.out.println("\nEquilateral triangles:");
-        List<Figure> equilateral = repo.query(new TriangleTypeSpecification(TriangleType.EQUILATERAL));
+        List<Figure> equilateral = repo.query(new TriangleTypeSpecificationimpl(TriangleType.EQUILATERAL));
         equilateral.forEach(System.out::println);
 
         System.out.println("\nFigures with area > 10:");
@@ -47,7 +47,7 @@ public class MainApp {
         largeArea.forEach(f -> System.out.printf("%s - area=%.2f\n", f, f.area().doubleValue()));
 
         System.out.println("\nFigures with perimeter < 20:");
-        List<Figure> smallPerimeter = repo.query(new PerimeterLessSpecification(new Fraction(20,1).toBigDecimal()));
+        List<Figure> smallPerimeter = repo.query(new PerimeterLessSpecificationImpl(new Fraction(20,1).toBigDecimal()));
         smallPerimeter.forEach(f -> System.out.printf("%s - perimeter=%.2f\n", f, f.perimeter().doubleValue()));
 
         repo.sortByArea();
