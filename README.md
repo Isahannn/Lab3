@@ -58,3 +58,4 @@ mvn test
   - Specification Pattern
 - Clean architecture principles
 - Comprehensive test coverage# Task3
+# Lab3
