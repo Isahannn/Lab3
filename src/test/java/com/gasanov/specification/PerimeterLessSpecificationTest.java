@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PerimeterLessSpecificationTest {
 
-    // Простая заглушка Figure для тестов
+
     static class StubFigure extends Figure {
         private final BigDecimal perimeter;
 

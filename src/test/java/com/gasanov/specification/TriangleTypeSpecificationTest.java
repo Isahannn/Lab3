@@ -4,7 +4,7 @@ import com.gasanov.entity.Fraction;
 import com.gasanov.entity.Triangle;
 import com.gasanov.entity.Triangle.TriangleType;
 import com.gasanov.entity.Figure;
-import com.gasanov.specification.impl.TriangleTypeSpecificationimpl;
+import com.gasanov.specification.impl.TriangleTypeSpecificationImpl;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -15,12 +15,12 @@ public class TriangleTypeSpecificationTest {
 
     @Test
     void testIsSatisfiedBy() {
-        TriangleTypeSpecificationimpl specIsosceles = new TriangleTypeSpecificationimpl(TriangleType.ISOSCELES);
-        TriangleTypeSpecificationimpl specEquilateral = new TriangleTypeSpecificationimpl(TriangleType.EQUILATERAL);
-        TriangleTypeSpecificationimpl specScalene = new TriangleTypeSpecificationimpl(TriangleType.SCALENE);
-        TriangleTypeSpecificationimpl specRight = new TriangleTypeSpecificationimpl(TriangleType.RIGHT);
+        TriangleTypeSpecificationImpl specIsosceles = new TriangleTypeSpecificationImpl(TriangleType.ISOSCELES);
+        TriangleTypeSpecificationImpl specEquilateral = new TriangleTypeSpecificationImpl(TriangleType.EQUILATERAL);
+        TriangleTypeSpecificationImpl specScalene = new TriangleTypeSpecificationImpl(TriangleType.SCALENE);
+        TriangleTypeSpecificationImpl specRight = new TriangleTypeSpecificationImpl(TriangleType.RIGHT);
 
-        // Создаем валидные треугольники с разными типами
+
 
         Triangle equilateral = new Triangle(
                 new Fraction(1, 1),
@@ -40,14 +40,12 @@ public class TriangleTypeSpecificationTest {
                 new Fraction(5, 1)
         );
 
-        // Проверяем корректность определения типов
         assertAll("triangle types",
                 () -> assertEquals(TriangleType.EQUILATERAL, equilateral.getType()),
                 () -> assertEquals(TriangleType.ISOSCELES, isosceles.getType()),
                 () -> assertEquals(TriangleType.RIGHT, right.getType())
         );
 
-        // Проверяем isSatisfiedBy для каждого типа
         assertAll("specification satisfaction",
                 () -> assertTrue(specEquilateral.isSatisfiedBy(equilateral)),
                 () -> assertFalse(specEquilateral.isSatisfiedBy(isosceles)),
@@ -66,7 +64,6 @@ public class TriangleTypeSpecificationTest {
                 () -> assertTrue(specRight.isSatisfiedBy(right))
         );
 
-        // Проверяем null и не-треугольники
         Figure nonTriangle = new Figure() {
             @Override
             public BigDecimal area() { return null; }
